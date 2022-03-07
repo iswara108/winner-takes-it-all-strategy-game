@@ -47,7 +47,7 @@ export default function App() {
     <>
       <NormalizeCss />
       <Wrapper>
-        <Typography variant="h2" textAlign="center">
+        <Typography variant="h4" as="h1" textAlign="center">
           The winner takes it all.
           <br />
           The loser has to fall.
@@ -81,7 +81,7 @@ export default function App() {
 function CashStatus({ cash }) {
   return (
     <CashStatusStyled>
-      <Typography variant="h3">
+      <Typography variant="h5" as="body1">
         You have{" "}
         {cash.toLocaleString("en-US", { style: "currency", currency: "USD" })}
       </Typography>
