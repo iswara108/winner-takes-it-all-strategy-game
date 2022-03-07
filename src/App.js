@@ -47,6 +47,11 @@ export default function App() {
     <>
       <NormalizeCss />
       <Wrapper>
+        <Typography variant="h2" textAlign="center">
+          The winner takes it all.
+          <br />
+          The loser has to fall.
+        </Typography>
         <CashStatus cash={cash} />
         <PlaceBet
           setCash={setCash}
@@ -62,7 +67,7 @@ export default function App() {
         />
         {cash <= 0 && (
           <LosingAlert>
-            <Typography variant="body1">
+            <Typography variant="h4">
               You have waisted all of your reserve money. No one trusts you any
               more.
             </Typography>
@@ -76,7 +81,7 @@ export default function App() {
 function CashStatus({ cash }) {
   return (
     <CashStatusStyled>
-      <Typography variant="body1">
+      <Typography variant="h3">
         You have{" "}
         {cash.toLocaleString("en-US", { style: "currency", currency: "USD" })}
       </Typography>
